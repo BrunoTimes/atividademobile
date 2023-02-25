@@ -1,0 +1,338 @@
+* {
+	box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+	--azul-primario: #007bff;
+	--azul-secundario: #0069d9;
+	--cinza: #f5f5f5;
+	--cinza-texto: #555;
+	--preto: #000;
+	--branco: #fff;
+}
+
+/* Estilo Global */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--preto);
+	background-color: var(--branco);
+}
+
+/* Layout */
+@media screen and (min-width: 480px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	
+	header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		background-color: var(--azul-primario);
+		color: var(--branco);
+	}
+	
+	main {
+		margin: 0 20px;
+	}
+	
+	section {
+		margin-bottom: 40px;
+	}
+	
+	section.intro {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	section.intro img {
+		max-width: 300px;
+		height: auto;
+		margin-left: 20px;
+	}
+	
+	section.features {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	section.features img {
+		max-width: 300px;
+		height: auto;
+		margin-right: 20px;
+	}
+	
+	section.signup {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	section.signup form {
+		width: 50%;
+	}
+	
+	section.signup input[type=text], 
+	section.signup input[type=email], 
+	section.signup input[type=password] {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 20px;
+		border: none;
+		border-radius: 5px;
+		background-color: var(--cinza);
+		color: var(--preto);
+	}
+	
+	section.signup label {
+		display: block;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+	
+	section.signup button {
+		display: block;
+		padding: 10px;
+		margin-top: 20px;
+		border: none;
+		border-radius: 5px;
+		background-color: var(--azul-primario);
+		color: var(--branco);
+		cursor: pointer;
+	}
+	
+	section.signup button:hover {
+		background-color: var(--azul-secundario);
+	}
+	
+	footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 60px;
+		background-color: var(--cinza);
+		color: var(--cinza-texto);
+	}
+}
+
+/* Responsividade */
+@media screen and (max-width: 479px) {
+	header {
+		height: auto;
+		padding: 20px;
+		text-align: center;
+	}
+	
+	main {
+		margin: 0;
+	}
+	
+	section.intro {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	section.intro img {
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	section.features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section.features img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    section.signup form {
+        width: 100%;
+    }
+}
+
+/* Estilos Adicionais */
+
+/* Botão */
+.btn {
+display: inline-block;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+background-color: var(--azul-primario);
+color: var(--branco);
+text-decoration: none;
+cursor: pointer;
+}
+
+.btn:hover {
+background-color: var(--azul-secundario);
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+h1 {
+font-size: 36px;
+}
+
+h2 {
+font-size: 30px;
+}
+
+h3 {
+font-size: 24px;
+}
+
+h4 {
+font-size: 18px;
+}
+
+h5 {
+font-size: 16px;
+}
+
+p {
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+/* Formulário */
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.form-group input[type=text],
+.form-group input[type=email],
+.form-group input[type=password] {
+display: block;
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 5px;
+border: none;
+border-radius: 5px;
+background-color: var(--cinza);
+color: var(--preto);
+}
+
+.form-group input[type=text]:focus,
+.form-group input[type=email]:focus,
+.form-group input[type=password]:focus {
+outline: none;
+box-shadow: 0 0 5px var(--azul-primario);
+}
+
+.form-group .error {
+color: red;
+font-weight: bold;
+margin-top: 5px;
+}
+
+.form-group .success {
+color: green;
+font-weight: bold;
+margin-top: 5px;
+}
+
+.form-group button[type=submit] {
+display: block;
+padding: 10px;
+margin-top: 20px;
+border: none;
+border-radius: 5px;
+background-color: var(--azul-primario);
+color: var(--branco);
+cursor: pointer;
+}
+
+.form-group button[type=submit]:hover {
+background-color: var(--azul-secundario);
+}
+/* Rodapé */
+footer {
+background-color: var(--cinza);
+color: var(--branco);
+padding: 20px;
+}
+
+footer p {
+margin: 0;
+}
+
+footer a {
+color: var(--branco);
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+.container {
+max-width: 720px;
+}
+section {
+	padding: 60px 0;
+}
+
+section.features {
+	display: flex;
+	align-items: center;
+}
+
+section.features img {
+	margin-right: 50px;
+	margin-bottom: 0;
+}
+
+section.signup form {
+	width: 60%;
+	margin: 0 auto;
+}
+}
+
+@media (min-width: 992px) {
+.container {
+max-width: 960px;
+}
+ection {
+	padding: 80px 0;
+}
+
+section.features img {
+	margin-right: 80px;
+}
+
+section.signup form {
+	width: 40%;
+}
+}
+
+@media (min-width: 1200px) {
+.container {
+max-width: 1140px;
+}
+}
